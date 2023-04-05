@@ -37,6 +37,9 @@ export class MoviesListComponent implements OnInit  {
       this.dataSource.disconnect();
     }
   }
+  /**
+   * Get movies List from MOVie DB
+   */
   getMoviesList(){
     this.movieService.getMoviesList().subscribe(res=>{
       this.moviesList = res.results;
@@ -48,9 +51,12 @@ export class MoviesListComponent implements OnInit  {
 
     });
   }
+/**
+ *Navigating to movie details Page
+ * @param movieId
+ */
 
   navigateMovieDetails(movieId:number){
-   // this.router.navigate(['/movies-list/details/', { id: heroId }]);
     this.router.navigateByUrl('/movies-list/details/'+movieId);
   }
 
