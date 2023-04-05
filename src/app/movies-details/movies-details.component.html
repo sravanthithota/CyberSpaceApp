@@ -8,9 +8,7 @@
         <img class="image-avatar" alt="" class="thumbnail image"
           src="https://image.tmdb.org/t/p/w220_and_h330_face{{movieDetails.backdrop_path}}">
         <p>
-          <!--bindings={
-    "ng-reflect-ng-if": "http://www.thegodfather.com/"
-  }--><a class="btn btn-info btn-block" target="_blank" href="http://www.thegodfather.com/">Visit Movies Website</a>
+          <a class="btn btn-info btn-block" target="_blank" href="http://www.thegodfather.com/">Visit Movies Website</a>
         </p>
       </div>
       <div class="col-md-6">
@@ -31,14 +29,14 @@
           </span>
 
 
-      <span class="genres" *ngFor="let geners of movieDetails.genres">
-          <a href="/genre/878-science-fiction/movie"> {{geners.name}}</a>,&nbsp;
-      </span>
+          <span class="genres" *ngFor="let geners of movieDetails.genres">
+            <a href="/genre/878-science-fiction/movie"> {{geners.name}}</a>,&nbsp;
+          </span>
 
-        <span class="runtime">
+          <span class="runtime">
             3h 12m
-        </span>
-    </div>
+          </span>
+        </div>
         <h3>Overview</h3>
         <p>
           {{movieDetails.overview}}
@@ -52,7 +50,8 @@
             </li>
             <li class="profile">
               <p><a href="/person/67803-amanda-silver">Original Language</a></p>
-              <p class="character">{{movieDetails.original_language =='en'? 'English': movieDetails.original_language}}</p>
+              <p class="character">{{movieDetails.original_language =='en'? 'English': movieDetails.original_language}}
+              </p>
             </li>
             <li class="profile">
               <p><a href="/person/67802-rick-jaffa">Budget</a></p>
@@ -66,7 +65,7 @@
               <p><a href="/person/6039-shane-salerno">Vote Count</a></p>
               <p class="character">{{movieDetails.vote_count}}</p>
             </li>
-      </ol>
+          </ol>
         </div>
         <div class="row is-flex">
           <div class="col-md-12">
@@ -75,7 +74,8 @@
 
           <div class="col-md-3" *ngFor="let images of movieDetails.production_companies">
             <div class="thumbnail" style="background: white">
-              <img alt=""class="rounded-circle" src="https://image.tmdb.org/t/p/w220_and_h330_face{{images.logo_path}}">
+              <img alt="" class="rounded-circle"
+                src="https://image.tmdb.org/t/p/w220_and_h330_face{{images.logo_path}}">
               <div class="caption">
                 <h6 class="text-center"><a>{{images.name}}</a>
                 </h6>
