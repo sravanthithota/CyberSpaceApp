@@ -47,66 +47,42 @@
         <div class="row is-flex">
           <ol class="people no_image">
             <li class="profile">
-              <p><a href="/person/2710-james-cameron">James Cameron</a></p>
-              <p class="character">Characters, Director, Screenplay, Story</p>
+              <p><a href="/person/2710-james-cameron">Statue</a></p>
+              <p class="character">{{movieDetails.status}}</p>
             </li>
             <li class="profile">
-              <p><a href="/person/67803-amanda-silver">Amanda Silver</a></p>
-              <p class="character">Screenplay, Story</p>
+              <p><a href="/person/67803-amanda-silver">Original Language</a></p>
+              <p class="character">{{movieDetails.original_language =='en'? 'English': movieDetails.original_language}}</p>
             </li>
             <li class="profile">
-              <p><a href="/person/67802-rick-jaffa">Rick Jaffa</a></p>
-              <p class="character">Screenplay, Story</p>
+              <p><a href="/person/67802-rick-jaffa">Budget</a></p>
+              <p class="character">{{movieDetails.budget}}</p>
             </li>
             <li class="profile">
-              <p><a href="/person/507-josh-friedman">Josh Friedman</a></p>
-              <p class="character">Story</p>
+              <p><a href="/person/507-josh-friedman">Revenue</a></p>
+              <p class="character">{{movieDetails.revenue |currency}}</p>
             </li>
             <li class="profile">
-              <p><a href="/person/6039-shane-salerno">Shane Salerno</a></p>
-              <p class="character">Story</p>
+              <p><a href="/person/6039-shane-salerno">Vote Count</a></p>
+              <p class="character">{{movieDetails.vote_count}}</p>
             </li>
       </ol>
         </div>
         <div class="row is-flex">
           <div class="col-md-12">
-            <h3 class="text-center">Cast</h3>
+            <h3 class="text-center">Production Details</h3>
           </div>
 
-          <div class="col-md-3">
-            <div class="thumbnail">
-              <img alt="" src="https://image.tmdb.org/t/p/w500//fuTEPMsBtV1zE98ujPONbKiYDc2.jpg">
+          <div class="col-md-3" *ngFor="let images of movieDetails.production_companies">
+            <div class="thumbnail" style="background: white">
+              <img alt=""class="rounded-circle" src="https://image.tmdb.org/t/p/w220_and_h330_face{{images.logo_path}}">
               <div class="caption">
-                <h6 class="text-center"><a ng-reflect-router-link="/actor/3084" href="/actor/3084">Marlon Brando</a>
+                <h6 class="text-center"><a>{{images.name}}</a>
                 </h6>
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="thumbnail">
-              <img alt="" src="https://image.tmdb.org/t/p/w500//fMDFeVf0pjopTJbyRSLFwNDm8Wr.jpg">
-              <div class="caption">
-                <h6 class="text-center"><a ng-reflect-router-link="/actor/1158" href="/actor/1158">Al Pacino</a></h6>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="thumbnail">
-              <img alt="" src="https://image.tmdb.org/t/p/w500//v3flJtQEyczxENi29yJyvnN6LVt.jpg">
-              <div class="caption">
-                <h6 class="text-center"><a ng-reflect-router-link="/actor/3085" href="/actor/3085">James Caan</a></h6>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="thumbnail">
-              <img alt="" src="https://image.tmdb.org/t/p/w500//ybMmK25h4IVtfE7qrnlVp47RQlh.jpg">
-              <div class="caption">
-                <h6 class="text-center"><a ng-reflect-router-link="/actor/3087" href="/actor/3087">Robert Duvall</a>
-                </h6>
-              </div>
-            </div>
-          </div>
+
         </div>
 
       </div>
