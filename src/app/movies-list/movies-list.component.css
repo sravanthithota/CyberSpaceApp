@@ -1,0 +1,31 @@
+.example-card {
+  max-width: 250px;
+  margin: 10px;
+}
+
+.example-form-field{
+  margin-right: 10px;
+}
+
+.my-container-wrap {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/** No CSS for this example */
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,1),
+              0 1px 1px 0 rgba(0,0,0,1),
+              0 1px 3px 0 rgba(0,0,0,1);
+}
+
+.mdc-card__media {
+  position: relative;
+  height:275px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

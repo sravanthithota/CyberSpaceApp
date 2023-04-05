@@ -1,1 +1,117 @@
-<p>moves-details works!</p>
+<div class="content bg-top-image"
+  style="background-image: url(https://image.tmdb.org/t/p/w220_and_h330_face{{movieDetails.backdrop_path}});">
+  <div class="background-image">
+    <div class="row" style="margin-right:0px; padding-top:30px;">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-4">
+        <img class="image-avatar" alt="" class="thumbnail image"
+          src="https://image.tmdb.org/t/p/w220_and_h330_face{{movieDetails.backdrop_path}}">
+        <p>
+          <!--bindings={
+    "ng-reflect-ng-if": "http://www.thegodfather.com/"
+  }--><a class="btn btn-info btn-block" target="_blank" href="http://www.thegodfather.com/">Visit Movies Website</a>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <h2>
+          {{movieDetails.title}}
+          <small class="label label-warning">
+            {{movieDetails.vote_average}}
+            <i class="glyphicon glyphicon-star"></i>
+          </small>
+        </h2>
+        <div class="facts">
+          <span class="certification">
+            PG-13
+          </span>
+
+          <span class="release">
+            {{movieDetails.release_date}}
+          </span>
+
+
+      <span class="genres" *ngFor="let geners of movieDetails.genres">
+          <a href="/genre/878-science-fiction/movie"> {{geners.name}}</a>,&nbsp;
+      </span>
+
+        <span class="runtime">
+            3h 12m
+        </span>
+    </div>
+        <h3>Overview</h3>
+        <p>
+          {{movieDetails.overview}}
+        </p>
+        <h3 class="tagline" dir="auto">{{movieDetails.tagline}}</h3>
+        <div class="row is-flex">
+          <ol class="people no_image">
+            <li class="profile">
+              <p><a href="/person/2710-james-cameron">James Cameron</a></p>
+              <p class="character">Characters, Director, Screenplay, Story</p>
+            </li>
+            <li class="profile">
+              <p><a href="/person/67803-amanda-silver">Amanda Silver</a></p>
+              <p class="character">Screenplay, Story</p>
+            </li>
+            <li class="profile">
+              <p><a href="/person/67802-rick-jaffa">Rick Jaffa</a></p>
+              <p class="character">Screenplay, Story</p>
+            </li>
+            <li class="profile">
+              <p><a href="/person/507-josh-friedman">Josh Friedman</a></p>
+              <p class="character">Story</p>
+            </li>
+            <li class="profile">
+              <p><a href="/person/6039-shane-salerno">Shane Salerno</a></p>
+              <p class="character">Story</p>
+            </li>
+      </ol>
+        </div>
+        <div class="row is-flex">
+          <div class="col-md-12">
+            <h3 class="text-center">Cast</h3>
+          </div>
+
+          <div class="col-md-3">
+            <div class="thumbnail">
+              <img alt="" src="https://image.tmdb.org/t/p/w500//fuTEPMsBtV1zE98ujPONbKiYDc2.jpg">
+              <div class="caption">
+                <h6 class="text-center"><a ng-reflect-router-link="/actor/3084" href="/actor/3084">Marlon Brando</a>
+                </h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="thumbnail">
+              <img alt="" src="https://image.tmdb.org/t/p/w500//fMDFeVf0pjopTJbyRSLFwNDm8Wr.jpg">
+              <div class="caption">
+                <h6 class="text-center"><a ng-reflect-router-link="/actor/1158" href="/actor/1158">Al Pacino</a></h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="thumbnail">
+              <img alt="" src="https://image.tmdb.org/t/p/w500//v3flJtQEyczxENi29yJyvnN6LVt.jpg">
+              <div class="caption">
+                <h6 class="text-center"><a ng-reflect-router-link="/actor/3085" href="/actor/3085">James Caan</a></h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="thumbnail">
+              <img alt="" src="https://image.tmdb.org/t/p/w500//ybMmK25h4IVtfE7qrnlVp47RQlh.jpg">
+              <div class="caption">
+                <h6 class="text-center"><a ng-reflect-router-link="/actor/3087" href="/actor/3087">Robert Duvall</a>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-1">
+      </div>
+    </div>
+  </div>
+</div>
